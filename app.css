@@ -45,12 +45,6 @@ a {
   width: max-content;
   padding: 0px 20px;
 }
-@media (max-width: 650px) {
-  .contact-link,
-  .history-link {
-    display: none;
-  }
-}
 .home {
   width: 100%;
   height: 100vh;
@@ -245,6 +239,7 @@ a {
   margin-left: -30px;
   padding-right: 20px;
   flex-direction: column;
+  align-items: baseline;
 }
 
 .list-item {
@@ -527,11 +522,71 @@ hr {
 .button:hover span:nth-child(4) {
   bottom: 50%;
 }
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .rns-logo {
     display: none;
   }
-}
+} */
 html {
   scroll-behavior: smooth;
+}
+
+/* hamburger design */
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+
+  /* Additional styles to create hamburger icon */
+  .hamburger:before,
+  .hamburger:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger:before {
+    transform: translateY(-8px);
+  }
+
+  .hamburger:after {
+    transform: translateY(8px);
+  }
+
+  /* Styles for active hamburger state */
+  .hamburger.active:before {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .hamburger.active:after {
+    transform: translateY(0) rotate(-45deg);
+  }
+  nav {
+    flex-direction: column;
+  }
+  ul {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header {
+    height: fit-content;
+  }
+  nav {
+    height: fit-content;
+  }
+  .navbar {
+    display: none;
+  }
 }
