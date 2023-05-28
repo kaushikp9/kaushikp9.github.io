@@ -381,15 +381,13 @@ a {
   text-decoration: none;
   color: white !important;
 }
-.rsc {
-  height: 5rem;
-  width: max-content;
+a .rsc {
+  height: 6rem;
+  width: 10rem;
   padding: 0px 20px;
 }
-a .rsc {
-  height: 5rem;
-  width: 7rem;
-  padding: 6px 20px 0px;
+.rns-logo {
+  width: 14rem;
 }
 
 /* over lay video section */
