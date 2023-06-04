@@ -1,0 +1,134 @@
+body {
+  background-image: url('images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+h1 {
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.788);
+  color: #333333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+}
+
+#pointsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Set the desired gap between rows */
+  margin-bottom: 10px;
+  border: 1px solid #dddddd00;
+  font-size: 18px;
+}
+
+#pointsTable th,
+#pointsTable td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+#pointsTable th {
+  background-color: purple;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#pointsTable th.team-details {
+  background-color: #f9f9f9;
+  color: #f9f9f9;
+}
+#pointsTable th.points-heading {
+  background-color: red;
+  color: #fff;
+}
+
+#pointsTable td.points {
+  background-color: yellow;
+}
+
+#pointsTable tr:nth-child(even) {
+  background-color: #f9f9f9fb;
+}
+
+#pointsTable tr:hover {
+  background-color: #ebebeb00;
+}
+
+.team {
+  position: relative;
+  cursor: pointer;
+}
+
+.team-details {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #414242;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+}
+
+.team:hover .team-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+#pointsTable th:nth-child(1),
+#pointsTable td:nth-child(1),
+#pointsTable th:nth-child(2),
+#pointsTable td:nth-child(2),
+#pointsTable th:nth-child(3),
+#pointsTable td:nth-child(3),
+#pointsTable th:nth-child(4),
+#pointsTable td:nth-child(4),
+#pointsTable th:nth-child(5),
+#pointsTable td:nth-child(5) {
+  background-color: purple;
+  color: #fff;
+}
+
+}
+#pointsTable td.points-cell {
+  background-color: yellow;
+  color: #333;
+}
+
+#pointsTable th.no-header,
+#pointsTable th.team-header
+#pointsTable th.wins-header,
+#pointsTable th.losses-header,
+#pointsTable th.draw-header,
+#pointsTable th.no-header:before,
+#pointsTable th.team-header:before,
+#pointsTable th.wins-header:before,
+#pointsTable th.losses-header:before,
+#pointsTable th.draw-header:before {
+  content: '';
+  display: block;
+  height: 10px;
+  background-color: hsl(300, 100%, 25%);
+}
